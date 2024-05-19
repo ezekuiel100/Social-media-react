@@ -9,10 +9,10 @@ function Nav() {
       ></input>
 
       <div className="flex gap-4 items-center">
-        <button className="text-white  text-sm font-bold bg-blue-500 rounded-full px-4 py-2">
+        <button className="text-white  text-sm bg-blue-500 rounded-full px-4 py-2">
           Create
         </button>
-        <img src="profile.jpg" className="bg-white rounded-full w-8 h-8"></img>
+        <img src="profile.webp" className="bg-white rounded-full w-8 h-8"></img>
       </div>
     </nav>
   );
