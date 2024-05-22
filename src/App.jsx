@@ -5,7 +5,7 @@ import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
-    <div className="bg-[#dcd9e1] h-screen">
+    <div className="bg-[#dcd9e1] min-h-screen ">
       <Nav />
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-6 p-4  ">
