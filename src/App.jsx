@@ -1,17 +1,15 @@
 import Feed from "./components/Feed";
 import Nav from "./components/Nav";
-import Requests from "./components/Requests";
 import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
-    <div className="bg-[#dcd9e1] min-h-screen ">
+    <div className="bg-[#dcd9e1] min-h-screen pb-10">
       <Nav />
-      <div className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-6 p-4  ">
+      <div className="max-w-5xl mx-auto">
+        <div className="flex gap-6 p-4  ">
           <Sidebar />
           <Feed />
-          <Requests />
         </div>
       </div>
     </div>
