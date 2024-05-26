@@ -8,8 +8,6 @@ function createPost(
   setcurrentTime,
   setPosts
 ) {
-  // setPostText("");
-
   if (postText.trim() != "" || image) {
     const newPost = {
       id: Math.random(),
