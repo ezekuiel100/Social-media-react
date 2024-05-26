@@ -5,7 +5,7 @@ import Post from "./Post";
 const post = [
   {
     name: "Bruno silva",
-    photo: "/profile.webp",
+    photo: "/gg.webp",
     time: Date.now(),
     content: { img: "./praia.jpg", text: `Ola mundo` },
   },

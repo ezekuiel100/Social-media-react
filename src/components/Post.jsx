@@ -22,7 +22,7 @@ function Post({ posts, currentTime }) {
       {posts.map(({ name, photo, time, content }, i) => (
         <div key={i} className="bg-white p-2 rounded-lg">
           <div className="flex gap-2 items-center">
-            <img src={photo} className="w-12 rounded-full" />
+            <img src={photo} className="w-12 h-12 rounded-full object-cover" />
 
             <div className="leading-tight	">
               <p className="font-semibold">{name}</p>

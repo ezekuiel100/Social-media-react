@@ -29,6 +29,8 @@ function NewPost({ setPosts, setcurrentTime }) {
   }
 
   function createPost() {
+    textareaRef.current.style.height = "auto";
+
     if (postText.trim() != "" || image) {
       const newPost = {
         name: "Ezequiel silva",
@@ -41,8 +43,6 @@ function NewPost({ setPosts, setcurrentTime }) {
       setImage(null);
       setcurrentTime(Date.now());
       setPosts((prevPosts) => [newPost, ...prevPosts]);
-
-      textareaRef.current.style.height = "auto";
     }
   }
 
@@ -54,7 +54,7 @@ function NewPost({ setPosts, setcurrentTime }) {
           type="text"
           rows={1}
           placeholder="What's in your mind?"
-          className="w-full outline-none px-2 resize-none py-2 "
+          className="w-full outline-none px-2 resize-none py-2 overflow-hidden"
           value={postText}
           onChange={handleText}
         />
@@ -115,7 +115,7 @@ function NewPost({ setPosts, setcurrentTime }) {
         </div>
       </div>
 
-      {image && <img src={image} className="w-36 h-36 p-2" />}
+      {image && <img src={image} className="h-36 p-2 " />}
     </div>
   );
 }
