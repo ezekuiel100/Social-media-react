@@ -24,12 +24,12 @@ function NewPost({ setPosts, setcurrentTime }) {
 
   function adjustTextareaHeight() {
     const textarea = textareaRef.current;
-    // textarea.style.height = "auto";
+    textarea.style.height = "auto";
     textarea.style.height = textarea.scrollHeight + "px";
   }
 
   function createPost() {
-    if (postText.length > 0 || image) {
+    if (postText.trim() != "" || image) {
       const newPost = {
         name: "Ezequiel silva",
         photo: "/profile.webp",
@@ -41,6 +41,8 @@ function NewPost({ setPosts, setcurrentTime }) {
       setImage(null);
       setcurrentTime(Date.now());
       setPosts((prevPosts) => [newPost, ...prevPosts]);
+
+      textareaRef.current.style.height = "auto";
     }
   }
 
@@ -112,6 +114,8 @@ function NewPost({ setPosts, setcurrentTime }) {
           <span className="font-semibold text-sm">Video</span>
         </div>
       </div>
+
+      {image && <img src={image} className="w-36 h-36 p-2" />}
     </div>
   );
 }
