@@ -1,9 +1,7 @@
 import { PhotoIcon, VideoCameraIcon } from "@heroicons/react/24/outline";
 import { useRef, useState } from "react";
 import { currentUser } from "../data/currentUser";
-import { handleImage } from "../utils/handleImage";
-import { handleText } from "../utils/handleText";
-import { createPost } from "../utils/createPost";
+import { createPost, handleText, handleImage } from "../utils/NewPostUtils";
 
 function NewPost({ setPosts, setcurrentTime }) {
   const [postText, setPostText] = useState("");
