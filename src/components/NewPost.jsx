@@ -10,24 +10,6 @@ function NewPost({ setPosts, setcurrentTime }) {
   const [image, setImage] = useState(null);
   const textareaRef = useRef(null);
 
-  // function createPost() {
-  //   textareaRef.current.style.height = "auto";
-
-  //   if (postText.trim() != "" || image) {
-  //     const newPost = {
-  //       name: currentUser.name,
-  //       photo: currentUser.photo,
-  //       time: Date.now(),
-  //       content: { img: image, text: `${postText}` },
-  //     };
-
-  //     setPostText("");
-  //     setImage(null);
-  //     setcurrentTime(Date.now());
-  //     setPosts((prevPosts) => [newPost, ...prevPosts]);
-  //   }
-  // }
-
   return (
     <div className="bg-white rounded-lg p-2">
       <div className="bg-white p-2 flex justify-between gap-2 items-start">

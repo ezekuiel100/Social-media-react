@@ -18,7 +18,7 @@ function Main() {
   return (
     <div className="w-3/4 rounded-lg space-y-4">
       <NewPost setPosts={setPosts} setcurrentTime={setcurrentTime} />
-      <PostCard posts={posts} currentTime={currentTime} />
+      <PostCard posts={posts} setPosts={setPosts} currentTime={currentTime} />
     </div>
   );
 }

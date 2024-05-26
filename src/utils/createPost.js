@@ -12,6 +12,7 @@ export function createPost(
 
   if (postText.trim() != "" || image) {
     const newPost = {
+      id: Math.random(),
       name: currentUser.name,
       photo: currentUser.photo,
       time: Date.now(),
