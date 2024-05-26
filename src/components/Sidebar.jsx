@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   ArrowLeftEndOnRectangleIcon,
   BellIcon,
@@ -7,6 +6,8 @@ import {
   GlobeAltIcon,
   HomeIcon,
 } from "@heroicons/react/24/outline";
+
+import { currentUser } from "../data/currentUser";
 
 const menu = [
   {
@@ -45,10 +46,10 @@ function Sidebar() {
   return (
     <div className="w-1/4 space-y-4 ">
       <div className="bg-white  rounded-lg p-4 flex gap-4">
-        <img src="/profile.webp" className="w-12 rounded-full" />
+        <img src={currentUser.photo} className="w-12 rounded-full" />
         <div className="leading-snug">
-          <p className="font-semibold">Ezequiel Silva</p>
-          <p className="text-gray-400">@ezequiel</p>
+          <p className="font-semibold">{currentUser.name}</p>
+          <p className="text-gray-400">{currentUser.username}</p>
         </div>
       </div>
 

@@ -1,4 +1,4 @@
-import Feed from "./components/Feed";
+import Main from "./components/Main";
 import Nav from "./components/Nav";
 import Sidebar from "./components/Sidebar";
 
@@ -9,7 +9,7 @@ function App() {
       <div className="max-w-5xl mx-auto">
         <div className="flex gap-6 p-4  ">
           <Sidebar />
-          <Feed />
+          <Main />
         </div>
       </div>
     </div>

@@ -1,18 +1,10 @@
 import { useEffect, useState } from "react";
 import NewPost from "./NewPost";
-import Post from "./Post";
+import PostCard from "./PostCard";
+import { Posts } from "../data/posts";
 
-const post = [
-  {
-    name: "Bruno silva",
-    photo: "/gg.webp",
-    time: Date.now(),
-    content: { img: "./praia.jpg", text: `Ola mundo` },
-  },
-];
-
-function Feed() {
-  const [posts, setPosts] = useState(post);
+function Main() {
+  const [posts, setPosts] = useState(Posts);
   const [currentTime, setcurrentTime] = useState(Date.now());
 
   useEffect(() => {
@@ -26,9 +18,9 @@ function Feed() {
   return (
     <div className="w-3/4 rounded-lg space-y-4">
       <NewPost setPosts={setPosts} setcurrentTime={setcurrentTime} />
-      <Post posts={posts} currentTime={currentTime} />
+      <PostCard posts={posts} currentTime={currentTime} />
     </div>
   );
 }
 
-export default Feed;
+export default Main;
