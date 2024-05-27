@@ -1,7 +1,12 @@
-import { TrashIcon } from "@heroicons/react/24/outline";
+import {
+  ChatBubbleOvalLeftIcon,
+  ShareIcon,
+  TrashIcon,
+} from "@heroicons/react/24/outline";
 import { currentUser } from "../data/currentUser";
 import { timeSince } from "../utils/timesince";
 import { deletePost } from "../utils/deletePost";
+import { HeartIcon } from "@heroicons/react/24/outline";
 
 function PostCard({ posts, currentTime, setPosts }) {
   return (
@@ -37,6 +42,17 @@ function PostCard({ posts, currentTime, setPosts }) {
             ))}
             <img src={content.img} />
           </div>
+
+          <footer className="flex justify-between p-2">
+            <div
+              className="flex
+             gap-6  "
+            >
+              <HeartIcon className="size-5 cursor-pointer hover:text-gray-500 transition-all" />
+              <ChatBubbleOvalLeftIcon className="size-5 cursor-pointer hover:text-gray-500 transition-all" />
+            </div>
+            <ShareIcon className="size-5 cursor-pointer hover:text-gray-500 transition-all" />
+          </footer>
         </div>
       ))}
     </>

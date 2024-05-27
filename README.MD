@@ -1,3 +1,5 @@
+# SOCIAL MEDIA PROJECT
+
 ![Social Media](public/social-media.png)
 
 ## About

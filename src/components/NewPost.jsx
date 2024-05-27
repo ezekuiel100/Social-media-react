@@ -21,7 +21,7 @@ function NewPost({ setPosts, setcurrentTime }) {
           onChange={(e) => handleText(e, setPostText, textareaRef)}
         />
         <button
-          className="text-white text-sm font-bold h-auto bg-blue-500 rounded-lg px-7 py-2 "
+          className="text-white text-sm font-bold h-auto bg-blue-600 rounded-lg px-7 py-2 hover:bg-blue-500 transition-all"
           onClick={() =>
             createPost(
               textareaRef,
