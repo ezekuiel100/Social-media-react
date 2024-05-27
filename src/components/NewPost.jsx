@@ -45,7 +45,7 @@ function NewPost({ setPosts, setcurrentTime }) {
           className="inline-flex gap-1 items-center cursor-pointer hover:text-blue-500 transition-all "
         >
           <PhotoIcon className="size-5" />
-          <span className="font-semibold text-sm ">Photo</span>
+          <span className="font-semibold text-sm hidden sm:inline">Photo</span>
         </label>
 
         <input
@@ -57,8 +57,8 @@ function NewPost({ setPosts, setcurrentTime }) {
         />
 
         <div className="flex gap-1 cursor-pointer hover:text-blue-500 transition-all">
-          <VideoCameraIcon className="size-5" />
-          <span className="font-semibold text-sm">Video</span>
+          <VideoCameraIcon className="size-5 " />
+          <span className="font-semibold text-sm hidden sm:inline">Video</span>
         </div>
       </div>
 

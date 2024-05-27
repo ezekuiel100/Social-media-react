@@ -16,7 +16,7 @@ function Main() {
   }, []);
 
   return (
-    <main className="w-3/4 rounded-lg space-y-4">
+    <main className="lg:w-3/4 rounded-lg space-y-4">
       <NewPost setPosts={setPosts} setcurrentTime={setcurrentTime} />
       <PostCard posts={posts} setPosts={setPosts} currentTime={currentTime} />
     </main>

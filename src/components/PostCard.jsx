@@ -2,18 +2,18 @@ import {
   ChatBubbleOvalLeftIcon,
   ShareIcon,
   TrashIcon,
+  HeartIcon,
 } from "@heroicons/react/24/outline";
 import { currentUser } from "../data/currentUser";
 import { timeSince } from "../utils/timesince";
 import { deletePost } from "../utils/deletePost";
-import { HeartIcon } from "@heroicons/react/24/outline";
 
 function PostCard({ posts, currentTime, setPosts }) {
   return (
     <>
       {posts.map(({ id, name, photo, time, content }, i) => (
         <div key={i} className="bg-white p-2 rounded-lg">
-          <div className="flex gap-2 justify-between">
+          <header className="flex gap-2 justify-between">
             <div className="flex gap-2 items-center">
               <img
                 src={photo}
@@ -32,7 +32,7 @@ function PostCard({ posts, currentTime, setPosts }) {
                 onClick={() => deletePost(id, setPosts)}
               />
             )}
-          </div>
+          </header>
 
           <div className="p-2 ">
             {content.text.split("\n").map((text, i) => (

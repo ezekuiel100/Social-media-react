@@ -21,8 +21,8 @@ const menu = [
     icon: <GlobeAltIcon className="size-5" />,
   },
   {
-    text: "Notificações",
-    href: "/notificações",
+    text: "Notifications",
+    href: "/notifications",
     icon: <BellIcon className="size-5" />,
   },
   {
@@ -31,8 +31,8 @@ const menu = [
     icon: <ChatBubbleOvalLeftIcon className="size-5" />,
   },
   {
-    text: "Setings",
-    href: "/setings",
+    text: "Settings",
+    href: "/settings",
     icon: <Cog8ToothIcon className="size-5" />,
   },
   {
@@ -44,8 +44,8 @@ const menu = [
 
 function Sidebar() {
   return (
-    <div className="w-1/4 space-y-4 ">
-      <div className="bg-white  rounded-lg p-4 flex gap-4">
+    <div className="w-full fixed bottom-0 left-0 sm:w-auto lg:w-1/4 space-y-4 sm:static">
+      <div className="bg-white  rounded-lg p-4 hidden sm:flex gap-4">
         <img src={currentUser.photo} className="w-12 rounded-full" />
         <div className="leading-snug">
           <p className="font-semibold">{currentUser.name}</p>
@@ -53,15 +53,16 @@ function Sidebar() {
         </div>
       </div>
 
-      <div className="bg-white rounded-lg text-xl flex flex-col">
+      <div className="bg-white shadow shadow-black sm:shadow-none  sm:rounded-lg text-xl flex sm:flex-col justify-between overflow-hidden">
         {menu.map(({ text, href, icon }, i) => (
           <a
             href={href}
             key={i}
-            className="py-6 px-8 font-bold hover:bg-blue-200 flex gap-1 items-center
-            "
+            className={` ${
+              href === "/" ? "bg-blue-600 text-white" : " hover:bg-blue-300"
+            } py-6 px-5 sm:px-8 font-bold  flex gap-1 items-center transition-all`}
           >
-            <span>{icon}</span> {text}
+            <span>{icon}</span> <span className="hidden sm:inline">{text}</span>
           </a>
         ))}
       </div>
