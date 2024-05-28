@@ -43,6 +43,8 @@ const menu = [
 ];
 
 function Sidebar() {
+  const path = window.location.pathname;
+
   return (
     <div className="w-full fixed bottom-0 left-0 sm:w-auto lg:w-1/4 space-y-4 sm:static">
       <div className="bg-white  rounded-lg p-4 hidden sm:flex gap-4">
@@ -59,7 +61,7 @@ function Sidebar() {
             href={href}
             key={i}
             className={` ${
-              href === "/" ? "bg-blue-600 text-white" : " hover:bg-blue-300"
+              href === path ? "bg-blue-600 text-white" : " hover:bg-blue-300"
             } py-6 px-5 sm:px-8 font-bold  flex gap-1 items-center transition-all`}
           >
             <span>{icon}</span> <span className="hidden sm:inline">{text}</span>
